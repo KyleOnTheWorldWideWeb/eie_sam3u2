@@ -169,11 +169,11 @@ static void UserApp1SM_Idle(void)
   // static bool bool_pause_state = 0;
   static u16 u16_NOTE_COUNTER = 0;
   static u16 u16_NOTE_INDEX = 0;
-  static u16 u16_NOTES[] = {
-      NOTE_A4_SHARP,
-      0,
-      NOTE_D4_SHARP,
-      0,
+  // TODO: Create and use struct to multiplex notes. Then create an array for it.
+  static chord NOTES[] = {
+      [NOTE_A4_SHARP, ],
+      [ 0, 0 ],
+      [ NOTE_D4_SHARP, 0 ] 0,
       NOTE_B4,
       0,
       NOTE_A5_SHARP,
